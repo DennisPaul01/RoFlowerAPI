@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#ff484a, #b783ff);
+  opacity: 0.8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Vidaloka&display=swap");
+/*Variabiles*/
+:root {
+  --white: #fff;
+  --white-bg: #f1fcfe;
+  --black: #000000;
+  --brown: #422117;
+  --blue-light: #47c2ff;
+  --blue-dark: #1884f4;
+  --font-header: "Vidaloka", serif;
+  --font-paragraph: "Poppins", sans-serif;
+}
+
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  padding: 0;
+  font-family: var(--font-paragraph);
+  font-weight: 400;
+  background: linear-gradient(var(--blue-dark), var(--white)) fixed;
+  color: var(--black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:active,
+a:focus {
+  outline: none;
+}
+
+/*Global*/
+h1,
+h2,
+h3 {
+  font-family: var(--font-header);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+
+h4,
+h5,
+p,
+label,
+input {
+  font-family: var(--font-paragraph);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+button {
+  cursor: pointer;
+  font-family: var(--font-header);
+}
+.App {
+  width: 90%;
+  height: 100%;
+  max-width: 1400px;
+  background-color: var(--white-bg);
+  margin: auto;
+  border-radius: 20px;
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* HEADER ZONE */
+.header-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+.header-links ul {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-links li {
+  list-style: none;
+  margin: 10px 20px;
+  color: var(--brown);
+  font-family: var(--font-header);
+  font-size: 24px;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* INTRODUCTION PAGE */
+.introduction-page-container {
+  text-align: center;
+  margin: auto;
+  max-width: 70%;
+}
+.search-form-container {
+  margin: auto;
+  background: white;
+  position: relative;
+  max-width: 70%;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Search Component*/
+.search-form-container input {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px 60px 20px 20px;
+  display: block;
+  border-radius: 50px;
+  border: 2px solid var(--blue-light);
+}
+.search-form-container input:focus {
+  outline: none;
+  border: 2px solid var(--blue-dark);
+}
+
+.search-form-container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 18px 20px;
+  z-index: 2;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* ConentRequest Component */
+.content-image-container {
+  width: 265px;
+  height: 309px;
+}
+.content-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.places-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 300px;
+}
+
+.map-container {
+  width: 600px;
+  height: 400px;
+}
+
+.combobox-input {
+  width: 100%;
+  padding: 0.5rem;
+}
