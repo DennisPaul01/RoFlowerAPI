@@ -14,6 +14,10 @@ const flowerSchema = new mongoose.Schema({
   zona: {
     type: String,
   },
+  locatieGeografica: {
+    type: [String],
+  },
+  diviziune: { type: String },
   descriere: {
     type: String,
   },

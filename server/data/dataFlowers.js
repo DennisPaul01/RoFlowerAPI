@@ -4,13 +4,19 @@ const flowers = [
     denumirePopulara: "Tilia",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Lime_tree.jpg/1920px-Lime_tree.jpg",
+    zona: "Romania",
+    locatieGeografica: "Romania",
+    diviziune: "Magnoliophyta",
     descriere:
       "Frunzele sunt lung-pețiolate, rotunde, ascuțite la vârf, iar pe fața inferioară se observă nervuri proeminente.Teiul produce flori, în număr de 2–10 pe ram, uneori și mai multe, de culoare alb-gălbuie, plăcut mirositoare, așezate pe un peduncul comun, concrescut aproape pe jumătatea lungimii lui, cu o bractee lungă în formă de limbă, de culoare verde-gălbuie. Fiecare floare este formată din 5 sepale care cad în momentul înfloririi, 5 petale, numeroase stamine și un ovar globulos. Fructul este o nucă de formă sferică sau ovală de dimensiuni mici.",
     location: [45.190447, 23.354785],
   },
   {
     nume: "Musetel",
-    denumirePopulara: "Musetele",
+    denumirePopulara: "Romanita",
+    zona: "Romania",
+    locatieGeografica: "Romania",
+    diviziune: "Tracheophyta",
     image:
       "https://cdn.pixabay.com/photo/2014/07/25/07/02/flowers-401490_960_720.jpg",
     descriere:
@@ -18,8 +24,11 @@ const flowers = [
     location: [45.784436, 21.140654],
   },
   {
-    nume: "Anghelina",
-    denumirePopulara: "Primula longiflora",
+    nume: "Primula longiflora",
+    denumirePopulara: "Anghelina",
+    zona: "Romania",
+    locatieGeografica: ["Rodnei", "Bucegi", "Fagaras", "Romania"],
+    diviziune: "Magnoliophyta",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Primula_halleri.JPG/280px-Primula_halleri.JPG",
     zona: "În România se găsește prin munții Maramureșului, Rodnei, Bucegi, Bîrsei și Făgăraș, de obicei pe pășuni, în locuri însorite, dar și prin crăpături umede.",

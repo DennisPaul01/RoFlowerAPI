@@ -30,6 +30,14 @@ async function existsFlowerWithName(flowerName) {
   return await findFlower({ nume: flowerName });
 }
 
+async function findFlowersByCategory(filter) {
+  return await flowersSchema.find({ diviziune: filter });
+}
+
+async function findFlowersByLocatie(filter) {
+  return await flowersSchema.find({ locatieGeografica: filter });
+}
+
 async function saveFlowers(flower) {
   try {
     await flowersSchema.updateOne(flower, flower, { upsert: true });
@@ -44,4 +52,6 @@ module.exports = {
   loadLaunchData,
   getAllFlowers,
   existsFlowerWithName,
+  findFlowersByCategory,
+  findFlowersByLocatie,
 };

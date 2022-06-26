@@ -1,7 +1,8 @@
 import React from "react";
 import ContentRequest from "../components/ContentRequest";
-
 import SearchForm from "../components/Forms/SearchForm";
+import AddFlowerForm from "../components/Forms/AddFlowerForm";
+import collageFoto from "../assets/flowers-example.jpg";
 
 const IntroductionPage = () => {
   return (
@@ -12,7 +13,9 @@ const IntroductionPage = () => {
         buna pentru utilizatori si pentru proiectele lor, gratuit.
       </h4>
       <SearchForm />
-      <ContentRequest />
+      {/* <img src={collageFoto}></img>
+      <ContentRequest /> */}
+      <AddFlowerForm />
     </section>
   );
 };

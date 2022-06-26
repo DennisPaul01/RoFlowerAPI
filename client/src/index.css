@@ -21,8 +21,10 @@ code {
   --white-bg: #f1fcfe;
   --black: #000000;
   --brown: #422117;
+  --brown-dark: #191f26;
   --blue-light: #47c2ff;
   --blue-dark: #1884f4;
+  --yellow: #f3a51e;
   --font-header: "Vidaloka", serif;
   --font-paragraph: "Poppins", sans-serif;
 }
@@ -49,6 +51,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  word-wrap: break-word;
 }
 a:active,
 a:focus {
@@ -95,7 +98,7 @@ button {
 }
 .App {
   width: 90%;
-  height: 100%;
+  min-height: 90vh;
   max-width: 1400px;
   background-color: var(--white-bg);
   margin: auto;
@@ -178,13 +181,61 @@ button {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* ConentRequest Component */
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 0.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ."
+    ". .";
+  text-align: left;
+}
+
+.content-column {
+  margin: 20px;
+}
+.content-container p {
+  margin: 10px 0;
+}
+
+.content-container p span {
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
 .content-image-container {
   width: 265px;
-  height: 309px;
+  height: 400px;
 }
 .content-image-container img {
+  /* margin-top: 80px; */
   width: 100%;
   height: 100%;
+}
+.content-description {
+  max-height: 195px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .content-container {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:
+      ". "
+      ". "
+      ". "
+      ". ";
+  }
+  .content-column {
+    margin: 0px;
+  }
+  .content-image-container {
+    margin: auto;
+  }
 }
 
 .places-container {
@@ -197,11 +248,123 @@ button {
 }
 
 .map-container {
-  width: 600px;
+  max-width: 600px;
   height: 400px;
 }
 
 .combobox-input {
   width: 100%;
   padding: 0.5rem;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* INTRODUCTION PAGE */
+
+.endpoints-container {
+  margin: auto;
+  max-width: 70%;
+}
+
+.endpoints-container h3 {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--black);
+}
+
+.endpoints-container p {
+  max-width: 100%;
+}
+
+.endpoint-example {
+  background-color: var(--white);
+  padding: 20px;
+}
+.endpoint-example span {
+  font-weight: 700;
+}
+
+.endpoint-example p {
+  margin: 10px 0;
+}
+
+.endpoint-example a {
+  text-decoration: underline;
+  color: var(--blue-dark);
+  max-width: 100%;
+}
+.endpoint-response {
+  background-color: var(--brown-dark);
+  padding: 20px;
+}
+.endpoint-response span {
+  color: #ff7733;
+}
+.endpoint-response p {
+  color: var(--white);
+  font-size: 10px;
+}
+
+.about {
+  padding-bottom: 50px;
+}
+
+.about h4 {
+  border-top: 2px solid var(--black);
+  margin: 30px 0 0 0;
+  padding: 10px 0;
+  font-family: var(--font-header);
+  font-size: 24px;
+}
+
+.about p {
+  margin: 10px 0;
+}
+
+.about a {
+  color: var(--blue-dark);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Form Add Flower Component */
+.form-add-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-add-container input {
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  padding: 10px 10px;
+  width: 100%;
+  margin: 10px 0px;
+  border: 1px solid var(--blue-light);
+}
+.form-add-container input:active {
+  border: 1px solid var(--yellow);
+}
+.form-add-container input:focus {
+  border: 1px solid var(--yellow);
+}
+
+.form-add-container input[type="submit"] {
+  border: none;
+  background-color: var(--yellow);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+.form-add-container input[type="submit"]:hover {
+  box-shadow: 0px 15px 20px rgba(212, 211, 129, 0.4);
+  transform: translateY(-7px);
+}
+
+.nav-active-link {
+  color: red;
 }
