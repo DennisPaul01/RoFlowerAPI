@@ -11,19 +11,13 @@ const Header = () => {
       <nav className="header-links">
         <ul>
           <li>
-            <NavLink to="/" activeClassName="nav-active-link">
-              Introducere
-            </NavLink>
+            <NavLink to="/">Introducere</NavLink>
           </li>
           <li>
-            <NavLink to="endpoints" activeClassName="nav-active-link">
-              Endpoints
-            </NavLink>
+            <NavLink to="endpoints">Endpoints</NavLink>
           </li>
           <li>
-            <NavLink to="javascript" activeClassName="nav-active-link">
-              Javascript
-            </NavLink>
+            <NavLink to="javascript">Javascript</NavLink>
           </li>
         </ul>
       </nav>

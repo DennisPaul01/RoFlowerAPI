@@ -23,11 +23,9 @@ async function getAllFlowers() {
 }
 
 async function findFlower(filter) {
-  return await flowersSchema.findOne(filter);
-}
-
-async function existsFlowerWithName(flowerName) {
-  return await findFlower({ nume: flowerName });
+  return await flowersSchema.findOne({
+    $or: [{ nume: filter }, { denumirePopulara: filter }],
+  });
 }
 
 async function findFlowersByCategory(filter) {
@@ -51,7 +49,7 @@ module.exports = {
   loadDataFlowers,
   loadLaunchData,
   getAllFlowers,
-  existsFlowerWithName,
+  findFlower,
   findFlowersByCategory,
   findFlowersByLocatie,
 };

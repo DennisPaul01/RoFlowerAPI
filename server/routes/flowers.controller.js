@@ -1,6 +1,6 @@
 const {
   getAllFlowers,
-  existsFlowerWithName,
+  findFlower,
   saveFlowers,
   findFlowersByCategory,
   findFlowersByLocatie,
@@ -21,7 +21,8 @@ async function httpGetOneFlower(req, res) {
     .slice(1)
     .toLowerCase()}`;
 
-  const existsFlower = await existsFlowerWithName(renameFlower);
+  const existsFlower = await findFlower(renameFlower);
+
   if (!existsFlower) {
     return res.status(404).json({
       error: "Floarea nu este in data de baze",

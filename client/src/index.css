@@ -149,6 +149,20 @@ button {
   max-width: 70%;
 }
 
+.introduction-page-collage-flowers {
+  margin: 30px 0;
+}
+
+.introduction-page-add-flower {
+  margin-top: 20px;
+  font-size: 24px;
+}
+.introduction-page-add-flower span {
+  color: #ff484a;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* Search Component*/
@@ -365,6 +379,15 @@ button {
   transform: translateY(-7px);
 }
 
-.nav-active-link {
-  color: red;
+.form-add-container h4 {
+  text-align: center;
+  font-size: 34px;
+}
+
+.form-add-error {
+  color: #ff484a;
+}
+
+.form-add-succes {
+  color: #1884f4;
 }

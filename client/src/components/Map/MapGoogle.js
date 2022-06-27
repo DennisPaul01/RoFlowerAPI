@@ -3,7 +3,13 @@ import React from "react";
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-export default function MapGoogle() {
+let latitudine, longitudine;
+
+export default function MapGoogle(props) {
+  console.log(props);
+  latitudine = props.coordonate[0];
+  longitudine = props.coordonate[1];
+  console.log(latitudine, longitudine);
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAAee0e-2RKmzvIhRBASu7-bkoDKDwrF_I",
   });
@@ -13,7 +19,7 @@ export default function MapGoogle() {
 }
 
 function Map() {
-  const location = useMemo(() => ({ lat: 45.784436, lng: 21.140654 }), []);
+  const location = { lat: latitudine, lng: longitudine };
 
   return (
     <GoogleMap

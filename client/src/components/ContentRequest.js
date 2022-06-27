@@ -1,46 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import MapGoogle from "./Map/MapGoogle";
 
-const ContentRequest = () => {
+const ContentRequest = (props) => {
+  const {
+    nume,
+    denumirePopulara,
+    image,
+    zona,
+    locatieGeografica,
+    diviziune,
+    descriere,
+    location,
+  } = props.flowers;
+  console.log(props.flowers);
+
   return (
     <div className="content-container">
       <div className="content-column">
         <p>
-          <span>Nume:</span> Matricaria recutita
+          <span>Nume:</span> {nume}
         </p>
         <p>
-          <span>Denumire populara:</span> Musetel
+          <span>Denumire populara:</span> {denumirePopulara}
         </p>
         <p>
-          <span>Locatie:</span> Romania
+          <span>Locatie:</span> {zona}
+        </p>
+        <p>
+          <span>Locatie Geografica:</span> {locatieGeografica}
+        </p>
+        <p>
+          <span>Diviziune Florala</span> {diviziune}
         </p>
       </div>
       <div className="content-column">
         <p className="content-description">
-          <span>Descriere:</span> Musetelul (denumit si romanita, romonel sau
-          romanica) este o planta erbacee anuala, medicinala, cu frunze divizate
-          si cu flori grupate in capitule terminale. Ajunge la o inaltime de
-          pana la 60 cm cu multe ramificatii, cu flori grupate in capitule
-          terminale.Musetelul (denumit si romanita, romonel sau romanica) este o
-          planta erbacee anual ica) este o planta erbacee anuala, medicinala, cu
-          frunze divizate si cu flori grupate in capitule terminale. Ajunge la o
-          inaltime de pana la 60 cm cu multe ramificatii, cu flori grupate in
-          capitule terminale.Musetelul (denumit si romanita, romonel sau
-          romanica) este o planta erbacee anual ica) este o planta erbacee
-          anuala, medicinala, cu frunze divizate si cu flori grupate in capitule
-          terminale. Ajunge la o inaltime de pana la 60 cm cu multe ramificatii,
-          cu flori grupate in capitule terminale.Musetelul (denumit si romanita,
-          romonel sau romanica) este o planta erbacee anual
+          <span>Descriere:</span> {descriere}
         </p>
       </div>
       <div className="content-column">
         <div className="content-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Primula_halleri.JPG/280px-Primula_halleri.JPG"></img>
+          <img src={image}></img>
         </div>
       </div>
 
       <div className="content-column">
-        <MapGoogle />
+        <MapGoogle coordonate={location} />
       </div>
     </div>
   );
