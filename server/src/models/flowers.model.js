@@ -1,6 +1,6 @@
 const flowersSchema = require("./flowers.mongo");
 
-const flowers = require("../data/dataFlowers");
+const flowers = require("../../data/dataFlowers");
 
 async function loadDataFlowers() {
   flowers.map((data) => {
@@ -8,11 +8,7 @@ async function loadDataFlowers() {
   });
 }
 
-async function loadLaunchData() {
-  console.log("Denis Paul is bed");
-}
 async function getAllFlowers() {
-  console.log("Denis Flowers");
   return flowersSchema.find(
     {},
     {
@@ -23,17 +19,23 @@ async function getAllFlowers() {
 }
 
 async function findFlower(filter) {
-  return await flowersSchema.findOne({
-    $or: [{ nume: filter }, { denumirePopulara: filter }],
-  });
+  return await flowersSchema.findOne(
+    {
+      $or: [{ nume: filter }, { denumirePopulara: filter }],
+    },
+    { _id: 0, __v: 0 }
+  );
 }
 
 async function findFlowersByCategory(filter) {
-  return await flowersSchema.find({ diviziune: filter });
+  return await flowersSchema.find({ diviziune: filter }, { _id: 0, __v: 0 });
 }
 
 async function findFlowersByLocatie(filter) {
-  return await flowersSchema.find({ locatieGeografica: filter });
+  return await flowersSchema.find(
+    { locatieGeografica: filter },
+    { _id: 0, __v: 0 }
+  );
 }
 
 async function saveFlowers(flower) {
@@ -47,7 +49,6 @@ async function saveFlowers(flower) {
 module.exports = {
   saveFlowers,
   loadDataFlowers,
-  loadLaunchData,
   getAllFlowers,
   findFlower,
   findFlowersByCategory,

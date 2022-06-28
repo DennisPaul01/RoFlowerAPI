@@ -3,10 +3,16 @@ import lupa from "../../assets/lupa.svg";
 import { httpGetOneFlower } from "../../hooks/request";
 
 const SearchForm = (props) => {
+  //  State care stocheaza search keyword
   const [searchWord, setSearchWord] = useState();
 
   const searchHandlerFlower = useCallback(async (e) => {
     e.preventDefault();
+
+    // Return daca imputul este gol
+    if (!searchWord) return;
+
+    // daca nu este gol transformam keyword-ul introdus si il verificam daca este in baza de date
     const renameFlower = `${searchWord[0].toUpperCase()}${searchWord
       .slice(1)
       .toLowerCase()}`;
@@ -31,7 +37,7 @@ const SearchForm = (props) => {
         }}
       />
       <button type="submit">
-        <img src={lupa}></img>
+        <img src={lupa} alt="*"></img>
       </button>
     </form>
   );

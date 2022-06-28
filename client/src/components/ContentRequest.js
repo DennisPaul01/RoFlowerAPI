@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import MapGoogle from "./Map/MapGoogle";
 
 const ContentRequest = (props) => {
+  // Destructuring props care vin in urma unui request si afisarea lor in pagina
   const {
     nume,
     denumirePopulara,
@@ -12,7 +13,6 @@ const ContentRequest = (props) => {
     descriere,
     location,
   } = props.flowers;
-  console.log(props.flowers);
 
   return (
     <div className="content-container">
@@ -40,7 +40,7 @@ const ContentRequest = (props) => {
       </div>
       <div className="content-column">
         <div className="content-image-container">
-          <img src={image}></img>
+          <img src={image} alt="Fara imagine"></img>
         </div>
       </div>
 

@@ -11,7 +11,6 @@ const { getPagination } = require("../services/query");
 async function httpGetAllFLowers(req, res) {
   const { skip, limit } = getPagination(req.query);
   const countFlowers = (await getAllFlowers()).length;
-  console.log(countFlowers);
   return res.status(200).json(await getAllFlowers());
 }
 

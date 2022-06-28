@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
-
-const MANGO_URL =
-  "mongodb+srv://DennisPaul08:bfeKZL93wPL8a2nx@cluster0.ws55k.mongodb.net/flowers?retryWrites=true&w=majority";
+require("dotenv").config();
+const MANGO_URL = process.env.DATABASE_URL;
 
 mongoose.connection.once("open", () => {
   console.log("MongoDB connection ready!");

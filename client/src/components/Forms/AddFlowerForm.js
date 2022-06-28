@@ -5,6 +5,7 @@ const AddFlowerForm = () => {
   const [succes, setSucces] = useState(false);
   const [messageError, setMessageError] = useState("");
 
+  // refs care iau data din inputs, puteam folosi states, dar dupa introducerea nu mai era necesar un clean pe inputs
   const numeInputRef = useRef();
   const denumirePopularaInputRef = useRef();
   const linkImgInputRef = useRef();
@@ -15,10 +16,12 @@ const AddFlowerForm = () => {
   const longInputRef = useRef();
   const latInputRef = useRef();
 
+  // functie care verifica daca se link-ul introdus este imagine
   function isImage(url) {
     return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
   }
 
+  // handler care trimite floarea noua introdusa in body ca request post pe functia httpAddFlower
   const addFlowerHandler = useCallback(async (e) => {
     e.preventDefault();
     if (
@@ -107,11 +110,21 @@ const AddFlowerForm = () => {
           </label>
           <label>
             Longitudine:<br></br>
-            <input type="number" name="Longitudine" ref={longInputRef} />
+            <input
+              type="number"
+              name="Longitudine"
+              ref={longInputRef}
+              placeholder="Intre 25 - 26"
+            />
           </label>
           <label>
             Latitudine:<br></br>
-            <input type="number" name="Latitudine" ref={latInputRef} />
+            <input
+              type="number"
+              name="Latitudine"
+              ref={latInputRef}
+              placeholder="Intre 45 - 46"
+            />
           </label>
           <input type="submit" value="Adauga Floare" />
         </div>

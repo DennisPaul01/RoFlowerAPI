@@ -24,6 +24,8 @@ code {
   --brown-dark: #191f26;
   --blue-light: #47c2ff;
   --blue-dark: #1884f4;
+  --orange: #ff7733;
+  --red: #ff484a;
   --yellow: #f3a51e;
   --font-header: "Vidaloka", serif;
   --font-paragraph: "Poppins", sans-serif;
@@ -36,6 +38,10 @@ code {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  position: relative;
 }
 
 body {
@@ -158,7 +164,7 @@ button {
   font-size: 24px;
 }
 .introduction-page-add-flower span {
-  color: #ff484a;
+  color: var(--red);
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
@@ -166,6 +172,9 @@ button {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* Search Component*/
+.search-form-container {
+  background-color: var(--white-bg);
+}
 .search-form-container input {
   width: 100%;
   margin: 20px 0;
@@ -312,7 +321,7 @@ button {
   padding: 20px;
 }
 .endpoint-response span {
-  color: #ff7733;
+  color: var(--orange);
 }
 .endpoint-response p {
   color: var(--white);
@@ -345,6 +354,8 @@ button {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* Form Add Flower Component */
 .form-add-container {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -385,9 +396,91 @@ button {
 }
 
 .form-add-error {
-  color: #ff484a;
+  color: var(--red);
 }
 
 .form-add-succes {
-  color: #1884f4;
+  color: var(--blue-dark);
+  margin: 30px 0px;
+}
+
+.flower-2,
+.flower-3,
+.flower-4,
+.flower-5,
+.flower-6,
+.flower-7 {
+  position: absolute;
+}
+
+.flower-1 {
+  position: absolute;
+  top: 0;
+  left: 5%;
+}
+
+.flower-2 {
+  top: 10%;
+  right: 9%;
+  z-index: -1;
+}
+.flower-3 {
+  right: 5%;
+  bottom: 30%;
+}
+.flower-4 {
+  bottom: 20%;
+  left: 10%;
+}
+.flower-6 {
+  bottom: 0;
+  right: 10%;
+  max-width: 40%;
+}
+.clouds {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.ground-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.ground-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.ground-bottom {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 800px) {
+  .flower-1,
+  .flower-2,
+  .flower-3,
+  .flower-4,
+  .flower-5,
+  .flower-6,
+  .flower-7 {
+    width: 20%;
+  }
+  .flower-6 {
+    bottom: 0;
+    right: 10%;
+    display: none;
+  }
+  .ground-left,
+  .ground-right {
+    display: none;
+  }
 }
