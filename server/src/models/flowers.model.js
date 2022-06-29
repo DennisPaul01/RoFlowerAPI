@@ -1,4 +1,4 @@
-const flowersSchema = require("./flowers.mongo");
+const flowersSchema = require("../models/flowers.mongo");
 
 const flowers = require("../../data/dataFlowers");
 

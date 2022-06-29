@@ -417,6 +417,16 @@ button {
   position: absolute;
   top: 0;
   left: 5%;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .flower-2 {
@@ -427,10 +437,12 @@ button {
 .flower-3 {
   right: 5%;
   bottom: 30%;
+  animation: rotation 10s infinite linear;
 }
 .flower-4 {
   bottom: 20%;
   left: 10%;
+  animation: rotation 10s infinite linear;
 }
 .flower-6 {
   bottom: 0;
