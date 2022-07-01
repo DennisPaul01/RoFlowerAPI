@@ -9,7 +9,9 @@ const EndPointsPage = () => {
         <div className="endpoint-example">
           <p>
             <span> Example: </span>
-            <a href="v1/flowers">v1/flowers</a>
+            <a href="http://roflowerapi.space/v1/flowers">
+              http://roflowerapi.space/v1/flowers
+            </a>
           </p>
           <p>Return:</p>
           <div className="endpoint-response">
@@ -24,7 +26,9 @@ const EndPointsPage = () => {
         <div className="endpoint-example">
           <p>
             <span> Example: </span>
-            <a href="v1/flowers/musetel">v1/flowers/musetel</a>
+            <a href="http://roflowerapi.space/v1/flowers/musetel">
+              http://roflowerapi.space/v1/flowers/musetel
+            </a>
           </p>
           <p>Return:</p>
           <div className="endpoint-response">
@@ -61,7 +65,9 @@ const EndPointsPage = () => {
         <div className="endpoint-example">
           <p>
             <span> Example: </span>
-            <a href="v1/flowers/category/bucegi">v1/flowers/category/bucegi</a>
+            <a href="http://roflowerapi.space/v1/flowers/category/bucegi">
+              http://roflowerapi.space/v1/flowers/category/bucegi
+            </a>
           </p>
           <p>Return:</p>
           <div className="endpoint-response">
@@ -105,8 +111,8 @@ const EndPointsPage = () => {
         <div className="endpoint-example">
           <p>
             <span> Example: </span>
-            <a href="v1/flowers/diviziune/magnoliophyta">
-              v1/flowers/diviziune/magnoliophyta
+            <a href="http://roflowerapi.space/v1/flowers/diviziune/magnoliophyta">
+              http://roflowerapi.space/v1/flowers/diviziune/magnoliophyta
             </a>
           </p>
           <p>Return:</p>

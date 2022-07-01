@@ -1,4 +1,4 @@
-const API_URL = "v1";
+const API_URL = "http://localhost:8000/v1";
 
 async function httpGetOneFlower(flowerName) {
   const response = await fetch(`${API_URL}/flowers/${flowerName}`);
